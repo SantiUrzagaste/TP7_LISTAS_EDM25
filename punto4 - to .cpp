@@ -15,6 +15,7 @@ public:
     Nodo* getSiguiente() { return sig; }
     void setSiguiente(Nodo* nuevo) { sig = nuevo; }
 };
+// pila 
 
 class Pila {
 private:
@@ -44,7 +45,7 @@ public:
     }
 };
 
-
+// cola 
 class Cola {
 private:
     Nodo* frente;
@@ -74,7 +75,7 @@ public:
             frente = frente->getSiguiente();
             borrado->setSiguiente(nullptr);
             if (frente == nullptr) fin = nullptr;
-            --cant;
+            cantidad = cantidad-1;
         }
         return borrado;
     }
@@ -88,7 +89,7 @@ int main() {
     Pila pila;
     pila.apilar(new Nodo(1));
     pila.apilar(new Nodo(2));
-    cout << "Tope de la pila: " << pila.verTope()->setDato() ;
+    cout << "Tope de la pila: " << pila.verTope()->getDato() ;
 
     Cola cola;
     cola.encolar(new Nodo(5));
