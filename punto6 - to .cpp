@@ -17,7 +17,7 @@ public:
 
 //lista generica 
 
-template < T>
+template <typename  T>
 class Lista {
 private:
 	Nodo<T>* cabeza;
@@ -61,7 +61,7 @@ bool esPrimo(int n) {
 // p6 a 
 void contarPrimos(Lista<int>& lista) {
 	Nodo<int>* aux = lista.getCabeza();
-	int contador  ;
+	int contador = 0  ;
 	
 	while (aux != nullptr) {
 		if (esPrimo(aux->getDato()))
@@ -75,7 +75,7 @@ void contarPrimos(Lista<int>& lista) {
 // p6 b 
 void contarMayusMinus(Lista<char>& lista) {
 	Nodo<char>* aux = lista.getCabeza();
-	int mayus , minus ;
+	int mayus = 0  , minus = 0  ;
 	
 	while (aux != nullptr) {
 		char c = aux->getDato();
@@ -113,9 +113,9 @@ int main() {
 	listaCaracteres.insertar('a');
 	
 	cout << "\nLista de caracteres: ";
-	mostrar();
+	listaCaracteres.mostrar();
 	
-	contarMayusMinus(listaCaracteres)
+	contarMayusMinus(listaCaracteres);
 	
 	return 0;
 }
