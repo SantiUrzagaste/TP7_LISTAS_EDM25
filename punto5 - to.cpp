@@ -12,13 +12,13 @@ public:
 	Nodo* getSiguiente() { return sig; }
 	void setSiguiente(Nodo* s) { sig = s; }
 	void setDato(int d) { dato = d; }
-}
+};
 
 class Lista {
 private:
 	Nodo* cabeza;
 public:
-	Lista() : cabeza(nullptr) 
+	Lista() : cabeza(nullptr) {}
 	
 	// p5 - a 
 	void insertar(int valor) {
@@ -69,8 +69,8 @@ public:
 // p5 - c 
 Lista combinarListas(Lista& l1, Lista& l2) {
 	Lista resultado;
-	Nodo* a = l1.setCabeza();
-	Nodo* b = l2.setCabeza();
+	Nodo* a = l1.getCabeza();
+	Nodo* b = l2.getCabeza();
 	
 	while (a != nullptr && b != nullptr) {
 		if (a->getDato() < b->getDato()) {
@@ -98,28 +98,28 @@ Lista combinarListas(Lista& l1, Lista& l2) {
 int main() {
 	// P5-a: crear y mostrar lista
 	Lista lista;
-	lista.insertar(10)
-	lista.insertar(3)
-	lista.insertar(7)
-	lista.insertar(1)
+	lista.insertar(10);
+	lista.insertar(3);
+	lista.insertar(7);
+	lista.insertar(1);
 	
 	cout << "Lista original: ";
-	mostrar();
+	lista.mostrar();
 	
 	// P5-b: ordenar lista por seleccion
 	lista.ordenarSeleccion();
 	cout << "Lista ordenada: ";
-	mostrar();
+	lista.mostrar();
 	
 	// P5-c: Combinar dos listas ordenadas
 	Lista otraLista;
-	otraLista.insertar(2)
-	otraLista.insertar(4)
-	otraLista.insertar(8)
+	otraLista.insertar(2);
+	otraLista.insertar(4);
+	otraLista.insertar(8);
 	
 	Lista combinada = combinarListas(lista, otraLista);
 	cout << "Lista combinada: ";
-	mostrar();
+	combinada.mostrar();
 	
 	return 0;
 }
