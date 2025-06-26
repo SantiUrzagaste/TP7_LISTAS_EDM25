@@ -8,7 +8,7 @@ private:
 public:
     Nodo(int dato) {
         this->dato = dato;
-        this->sig = null;
+        this->sig = nullptr;
     }
     int getDato() { return dato; }
     void setDato(int valor) { dato = valor; }
@@ -18,7 +18,7 @@ public:
 
 class Lista {
 private:
-    Nodo* inicio
+    Nodo* inicio;
 public:
     Lista() {
         inicio = nullptr;
@@ -65,11 +65,11 @@ public:
 
 int main() {
     Lista lista;
-    lista.AgregarFinal(new Nodo(6))
-    lista.AgregarFinal(new Nodo(4))
-    lista.AgregarFinal(new Nodo(9))
-    lista.AgregarFinal(new Nodo(5))
-    lista.AgregarFinal(new Nodo(8))
+    lista.AgregarFinal(new Nodo(6));
+    lista.AgregarFinal(new Nodo(4));
+    lista.AgregarFinal(new Nodo(9));
+    lista.AgregarFinal(new Nodo(5));
+    lista.AgregarFinal(new Nodo(8));
 
     lista.MostrarLista();
     cout << "Minimo: " << lista.minimo() << endl;
