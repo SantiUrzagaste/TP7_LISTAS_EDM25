@@ -46,19 +46,19 @@ public:
                 return pos;
             }
             i = i->getSiguiente();
-            pos=pos+1;
+            pos++;
         }
         return -1;
     }
 
-    Nodo* buscar_porindice(int pos) {
+    Nodo* buscar_por_indice(int pos) {
         if (pos < 0 || pos >= cant) return nullptr;
         Nodo* i = inicio;
         int cont = 0;
         while (i != nullptr) {
             if (cont == pos) return i;
             i = i->getSiguiente();
-            cont=cont+1;
+            cont++;
         }
         return nullptr;
     }
@@ -70,14 +70,14 @@ public:
 
 int main() {
     Lista lista;
-    lista.AgregarFinal(new Nodo(10))
-    lista.AgregarFinal(new Nodo(20))
-    lista.AgregarFinal(new Nodo(30))
+    lista.AgregarFinal(new Nodo(10));
+    lista.AgregarFinal(new Nodo(20));
+    lista.AgregarFinal(new Nodo(30));
 
     cout << "Indice de 20: " << lista.buscar_indice(20) << endl;
     Nodo* nodo = lista.buscar_por_indice(2);
     if (nodo != nullptr)
-        cout << "Elemento en I­ndice 2: " << nodo->getDato() << endl;
+        cout << "Elemento en IÂ­ndice 2: " << nodo->getDato() << endl;
     else
         cout << "No encontrado" << endl;
 
