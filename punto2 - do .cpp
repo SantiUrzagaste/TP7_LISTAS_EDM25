@@ -52,7 +52,7 @@ public:
     int getCantidad() {
         return cant;
     }
-}
+};
 
 int main() {
     Lista lista;
@@ -60,9 +60,9 @@ int main() {
     lista.AgregarFinal(new Nodo(2));
     lista.AgregarFinal(new Nodo(3));
 
-    cout << "Cantidad: " << getCantidad() << endl;
-    EliminarInicio();
-    cout << "Cantidad tras eliminar: " << getCantidad() << endl;
+    cout << "Cantidad: " << lista.getCantidad() << endl;
+    lista.EliminarInicio();
+    cout << "Cantidad tras eliminar: " << lista.getCantidad() << endl;
 
     return 0;
 }
