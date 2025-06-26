@@ -11,7 +11,7 @@ public:
 	int getDato() { return dato; }
 	Nodo* getSiguiente() { return sig; }
 	void setSiguiente(Nodo* s) { sig = s; }
-}
+};
 
 // funcion enigma 
 // Proposito : muestra  la lista en orden inverso (de atras hacia adelante)
@@ -65,19 +65,19 @@ int main() {
 		cout << aux->getDato() << " ";
 		aux = aux->getSiguiente();
 	}
-	
+	cout << endl;
 	// Prueba  enigma
 	cout << "enigma (lista en orden inverso): ";
 	enigma(inicio);
 	
-	
+	cout << endl ; 
 	// Prueba  misterio
 	int cantidad = misterio(inicio);
 	cout << "misterio (cantidad de nodos): " << cantidad << endl;
 	
 	// Prueba  desconocido
 	Nodo* ultimo = desconocido(inicio);
-	cout << "desconocido (ultimo nodo): " << ultimosetDato() << endl;
+	cout << "desconocido (ultimo nodo): " << ultimo->getDato() << endl;
 	
 	return 0;
 }
