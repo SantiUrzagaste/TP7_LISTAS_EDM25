@@ -75,7 +75,7 @@ public:
             frente = frente->getSiguiente();
             borrado->setSiguiente(nullptr);
             if (frente == nullptr) fin = nullptr;
-            cantidad = cantidad-1;
+            cant =  cant-1;
         }
         return borrado;
     }
@@ -90,6 +90,7 @@ int main() {
     pila.apilar(new Nodo(1));
     pila.apilar(new Nodo(2));
     cout << "Tope de la pila: " << pila.verTope()->getDato() ;
+    cout << endl;
 
     Cola cola;
     cola.encolar(new Nodo(5));
