@@ -7,12 +7,12 @@ typedef struct tnodo{
     int dato;
     pnodo sig;
     pnodo ant;
-}
+}; 
 
 typedef struct tlista{
-    nodo inicio;
-    nodo fin;
-}
+    pnodo inicio;
+    pnodo fin;
+}; 
 
 void IniciarLista(tlista &lista){
     lista.inicio = NULL;
@@ -41,7 +41,7 @@ void AgregarInicio(tlista &lista, pnodo nuevo){
 }
 
 void DecimalABinario(tlista &lista, int numero){
-     nuevo;
+     pnodo nuevo;
     while(numero > 0){
         CrearNodo(nuevo, numero % 2);
         AgregarInicio(lista, nuevo);
