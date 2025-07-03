@@ -15,16 +15,16 @@ typedef struct tlista{
 };
 
 void IniciarLista(tlista &lista){
-    lista.inicio 
-    lista.fin 
+    lista.inicio = NULL ; 
+    lista.fin  = NULL ; 
 }
 
 void CrearNodo(pnodo &nuevo, int valor){
     nuevo = new tnodo;
     if(nuevo != NULL){
         nuevo->dato = valor;
-        nuevo->sig  
-        nuevo->ant 
+        nuevo->sig  = NULL ; 
+        nuevo->ant  = NULL ; 
     }
 }
 
@@ -43,7 +43,7 @@ void AgregarFinal(tlista &lista, pnodo nuevo){
 void MostrarMayorYMenor(tlista lista){
     if(lista.inicio == NULL){
         cout << "La lista esta vacia." << endl;
-        
+    return ;     
     }
 
     int mayor = lista.inicio->dato;
@@ -61,7 +61,7 @@ void MostrarMayorYMenor(tlista lista){
 }
 
 int main(){
-     lista;
+     tlista lista;
     pnodo nuevo;
 
     IniciarLista(lista);
