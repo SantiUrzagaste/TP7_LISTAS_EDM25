@@ -4,7 +4,7 @@ using namespace std;
 
 typedef struct tnodo *pnodo;
 typedef struct tnodo{
-    int dato = 0 ;
+    int dato ;
     pnodo sig;
     pnodo ant;
 };
@@ -76,7 +76,7 @@ void QuitarFinal(tlista &lista){
             lista.fin = lista.fin->ant;
             lista.fin->sig = NULL;
         }
- 
+     delete aux ; 
     }
 }
 
@@ -124,7 +124,7 @@ int main(){
     cout << "Luego de quitar final: ";
     MostrarLista(lista);
 
-    int valorBuscado 
+    int valorBuscado = 20 ; 
     if(BuscarValor(lista, valorBuscado))
         cout << "El valor " << valorBuscado << " se encuentra en la lista." << endl;
     else
