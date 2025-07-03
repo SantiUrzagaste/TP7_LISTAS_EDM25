@@ -2,8 +2,8 @@
 #include<iostream>
 using namespace std;
 
- struct tnodo *pnodo;
- struct tnodo{
+typedef struct tnodo *pnodo;
+typedef struct tnodo{
     int dato;
     pnodo sig;
     pnodo ant;
@@ -85,7 +85,7 @@ int main(){
     tlista lista;
     pnodo nuevo;
 
-    lista.IniciarLista
+    IniciarLista (lista); 
 
     for(int i = 1; i <= 5; i++){
         CrearNodo(nuevo, i * 10);
@@ -93,15 +93,15 @@ int main(){
     }
 
     cout << "Lista original: ";
-    lista.MostrarLista
+    MostrarLista ( lista ) ; 
 
     QuitarInicio(lista);
     cout << "Luego de quitar inicio: ";
-    lista.MostrarLista
+    MostrarLista ( lista ) ; 
 
     QuitarFinal(lista);
     cout << "Luego de quitar final: ";
-    lista.MostrarLista
+    MostrarLista ( lista ) ; 
 
     return 0;
 }
