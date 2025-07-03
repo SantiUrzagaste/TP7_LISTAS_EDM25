@@ -40,7 +40,7 @@ void AgregarFinal(tlista &lista, pnodo nuevo){
     }
 }
 
-void EliminarMultiplosDe3(lista lista){
+void EliminarMultiplosDe3(tlista &lista){
     pnodo aux = lista.inicio;
     while(aux != NULL){
         pnodo siguiente = aux->sig;
@@ -63,17 +63,17 @@ void EliminarMultiplosDe3(lista lista){
             }
             delete aux;
         }
-        aux ;
+        aux = siguiente ;
     }
 }
 
 void MostrarLista(tlista lista){
-     aux = lista.inicio;
+    pnodo aux = lista.inicio;
     while(aux != NULL){
         cout << aux->dato << " ";
         aux = aux->sig;
     }
-   
+   cout << endl ; 
 }
 
 int main(){
